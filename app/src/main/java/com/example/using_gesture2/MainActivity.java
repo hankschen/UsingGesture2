@@ -1,6 +1,7 @@
 package com.example.using_gesture2;
 
 import android.app.Activity;
+import android.content.SharedPreferences;
 import android.gesture.Gesture;
 import android.gesture.GestureLibraries;
 import android.gesture.GestureLibrary;
@@ -41,6 +42,7 @@ public class MainActivity extends Activity
 		setContentView(R.layout.activity_main);
 		findGestureLib();
 		findViews();
+		restorePrefs();
 	}
 
 	void findViews()
@@ -106,7 +108,7 @@ public class MainActivity extends Activity
 		int g = (int) (Math.random() * 255);
 		int b = (int) (Math.random() * 255);
 		System.out.println("r = " + r);
-		textView1.setText("大家");
+		textView1.setText("變更文字了");
 		textView1.setTextColor(Color.rgb(r, g, b));
 		textView1.setTextSize(50);
 	}
@@ -115,5 +117,24 @@ public class MainActivity extends Activity
 	{
 		setContentView(R.layout.activity_main);
 		findViews();
+	}
+
+	public static final String PREF  = "record";
+	public static final String PREF_FIRST_TIME = "First time";
+	public static final boolean ifFirstTime = true;
+
+	private void restorePrefs(){
+		SharedPreferences setting = getSharedPreferences(PREF, 0);
+		String firstTime = setting.getString(PREF_FIRST_TIME, "true");
+		if(!firstTime.equals("true")){
+			linearLayout1.setVisibility(View.INVISIBLE);
+		}
+	}
+
+	@Override
+	protected void onPause() {
+		super.onPause();
+		SharedPreferences settings = getSharedPreferences(PREF, 0);
+		settings.edit().putString(PREF_FIRST_TIME, "false").commit();
 	}
 }

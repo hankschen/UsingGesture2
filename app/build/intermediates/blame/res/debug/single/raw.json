@@ -1,6 +1,10 @@
 [
     {
-        "merged": "F:\\Hanks_AndroidCode\\UsingGesture2\\app\\build\\intermediates\\res\\merged\\debug\\raw\\gestures",
-        "source": "F:\\Hanks_AndroidCode\\UsingGesture2\\app\\src\\main\\res\\raw\\gestures"
+        "merged": "/Volumes/250SSD/Hanks_AndroidCode/UsingGesture2/F:\\Hanks_AndroidCode\\UsingGesture2\\app\\build\\intermediates\\res\\merged\\debug\\raw\\gestures",
+        "source": "/Volumes/250SSD/Hanks_AndroidCode/UsingGesture2/F:\\Hanks_AndroidCode\\UsingGesture2\\app\\src\\main\\res\\raw\\gestures"
+    },
+    {
+        "merged": "/Volumes/250SSD/Hanks_AndroidCode/UsingGesture2/app/build/intermediates/res/merged/debug/raw/gestures",
+        "source": "/Volumes/250SSD/Hanks_AndroidCode/UsingGesture2/app/src/main/res/raw/gestures"
     }
 ]
